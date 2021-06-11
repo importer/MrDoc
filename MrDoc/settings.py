@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 from configparser import ConfigParser,RawConfigParser
 from loguru import logger
+from dj_database_url import parse as dburl
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,7 +136,7 @@ else:
             'PORT': CONFIG['database']['port'],
         }
     }
-
+DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
