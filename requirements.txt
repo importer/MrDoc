@@ -16,3 +16,4 @@ selenium==3.141.0
 webdriver_manager==3.3.0
 PyYAML==5.4.1
 gunicorn
+psycopg2
