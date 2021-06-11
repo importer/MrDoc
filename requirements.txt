@@ -18,3 +18,5 @@ PyYAML==5.4.1
 gunicorn
 psycopg2
 dj-database-url
+dj-static
+django-heroku
